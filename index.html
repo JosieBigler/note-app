@@ -1,24 +1,58 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-</head>
-<body>
-    <button>Add Note</button>
-    <button>Import Notes</button>
-    <table class="table">
-        <thead>
-            <th>Clinic Id</th>
-            <th>Date</th>
-            <th>Note</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </thead>
-        <tbody id="dataSource">
+<html lang="en">
 
-        </tbody>
-    </table>
+</html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="toggleAddRecord()">Add Note</button>
+        <button>Import Notes</button>
+
+        <form>
+            <div class="row" id="addRecordForm" hidden>
+                <label for="addClinicId">Clinic Id: </label>
+                <input id="addClinicId" />
+                <label for="addDate">Date: </label>
+                <input type="date" id="addDate" />
+                <label for="addNote">Note: </label>
+                <input id="addNote" />
+                <button>Submit</button>
+            </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <th>Clinic Id</th>
+                <th>Date</th>
+                <th>Note</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody id="dataSource">
+                <tr>
+                    <td>1</td>
+                    <td>1/1/2019</td>
+                    <td>Tested testy test</td>
+                    <td><button>Edit</button></td>
+                    <td><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>7/31/2019</td>
+                    <td>Tested testy test</td>
+                    <td><button>Edit</button></td>
+                    <td><button>Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <script src="main.js"></script>
+    <script src="displayUtilities.js"></script>
 
 </body>
